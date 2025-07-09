@@ -3,33 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Scrolling Image Gallery</title>
+  <title>Wedding Scroll Page</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100vh;
       font-family: 'Playfair Display', serif;
       background-color: #eaeaea;
-    }
-
-    .border-wrapper {
-      margin: 20px;
-      height: calc(100vh - 40px);
-      border: 8px solid #D4AF37;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      scroll-behavior: smooth;
     }
 
     .gallery-container {
-      flex: 1;
+      height: 40vh;
+      width: 100%;
       background: #000;
       overflow: hidden;
-      position: relative;
     }
 
     .gallery-track {
@@ -51,33 +40,36 @@
       100% { transform: translateX(-50%); }
     }
 
-    .section {
-      flex: 1;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: #f9f9f9;
+    .spacer-5vh {
+      height: 5vh;
     }
 
-    .center-text {
+    .section-title {
+      text-align: center;
       font-size: 36px;
       font-weight: bold;
-      text-align: center;
       color: #D4AF37;
-      margin-bottom: 40px;
     }
 
-    .about-container {
+    .row {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 30px;
-      gap: 30px;
+      padding: 0 10vw;
+      margin: 20px 0;
       flex-wrap: wrap;
+    }
+
+    .row.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .person-name {
+      font-size: 32px;
+      font-weight: bold;
+      color: #D4AF37;
+      flex: 1;
+      text-align: center;
     }
 
     .circle-img {
@@ -89,79 +81,63 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
-    .person-name {
-      font-size: 40px;
-      font-weight: bold;
-      color: #D4AF37;
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
-      .about-container {
+      .row, .row.reverse {
         flex-direction: column;
-        text-align: center;
+        padding: 0 5vw;
       }
 
       .person-name {
-        font-size: 32px;
+        font-size: 28px;
+        margin-bottom: 15px;
       }
 
       .circle-img {
         width: 150px;
         height: 150px;
       }
-
-      .border-wrapper {
-        margin: 10px;
-        height: calc(100vh - 20px);
-        border-width: 5px;
-        border-radius: 12px;
-      }
     }
   </style>
 </head>
 <body>
 
-  <div class="border-wrapper">
-
-    <!-- Scrolling Gallery -->
-    <div class="gallery-container">
-  <div class="gallery-track"> 
-    <!-- Add your images here -->
-     <img src="./wedding1.jpg" alt="Image 1">
-    <img src="./wedding3background.jpg" alt="Image 2">
-    <img src="./wedding1.jpg" alt="Image 3">
-    <img src="./wedding3background.jpg" alt="Image 4">
-    <img src="./wedding1.jpg" alt="Image 5"> 
-    
-    <!-- Repeat images for seamless loop -->
-   
+  <!-- Top Gallery -->
+  <div class="gallery-container">
+    <div class="gallery-track">
       <img src="./wedding1.jpg" alt="Image 1">
-    <img src="./wedding3background.jpg" alt="Image 2">
-    <img src="./wedding1.jpg" alt="Image 3">
-    <img src="./wedding3background.jpg" alt="Image 4">
-    <img src="./wedding1.jpg" alt="Image 5">
-  </div>
-</div>
-
-    <!-- About Us Section -->
-    <div class="section">
-      <div class="center-text">ABOUT US</div>
-
-      <div class="about-container">
-        <img src="./wedding1.jpg" alt="Sijoy" class="circle-img">
-        <div class="person-name">SIJOY</div>
-      </div>
-
-      <div class="about-container">
-        <div class="person-name">SHERLY</div>
-        <img src="./wedding1.jpg" alt="Sherly" class="circle-img">
-      </div>
+      <img src="./wedding3background.jpg" alt="Image 2">
+      <img src="./wedding1.jpg" alt="Image 3">
+      <img src="./wedding3background.jpg" alt="Image 4">
+      <img src="./wedding1.jpg" alt="Image 5">
+      <!-- Repeat for loop -->
+      <img src="./wedding1.jpg" alt="Image 6">
+      <img src="./wedding3background.jpg" alt="Image 7">
     </div>
+  </div>
 
+  <!-- Gap -->
+  <div class="spacer-5vh"></div>
+
+  <!-- About Us -->
+  <div class="section-title">ABOUT US</div>
+
+  <!-- Gap -->
+  <div class="spacer-5vh"></div>
+
+  <!-- First Person (Name Left, Photo Right) -->
+  <div class="row">
+    <div class="person-name">SIJOY</div>
+    <img src="./wedding1.jpg" alt="Sijoy" class="circle-img">
+  </div>
+
+  <!-- Small Gap -->
+  <div style="height: 2vh;"></div>
+
+  <!-- Second Person (Photo Left, Name Right) -->
+  <div class="row reverse">
+    <div class="person-name">SHERLY</div>
+    <img src="./wedding1.jpg" alt="Sherly" class="circle-img">
   </div>
 
 </body>
 </html>
-
-
