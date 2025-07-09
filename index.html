@@ -1,203 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Wedding Invitation</title>
-
-  <!-- Import Sevillana Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scrolling Image Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
-    body {
-  background: url('./wedding3background.jpg') no-repeat center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: scroll; /* Mobile-friendly */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  padding: 50px 20px;
-  color: #ffffff;
-}
-.name-sevillana {
-  font-family: 'Sevillana', cursive;
-  font-size: 80px;
-  color: white;
-  -webkit-text-stroke: 1px gold; /* ← changed color here */
-  margin: 10px 0;
-}
-
-
-    .circle-image {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 0 auto;
-      border: 5px solid pink;
-      box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
-    }
-
-    .circle-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    h2 {
-      margin-top: 10px;
-      font-size: 20px;
-      color: #ffffff;
-      -webkit-text-stroke: 1px black;
-      font-family: 'Archivo', sans-serif;
-    }
-
-    h1 {
-      font-size: 32px;
-      margin: 10px 0;
-      color: #ffffff;
-      -webkit-text-stroke: 1px gold;
-      font-family: 'Sevillana', cursive;
-    }
-
-    .ampersand {
-      font-size: 24px;
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Playfair Display', serif;
+      background-color: #eaeaea;
     }
 
-    .divider {
-      margin: 30px 0;
-      font-size: 24px;
-      color: white;
-      -webkit-text-stroke: 1px black;
+    .border-wrapper {
+      margin: 20px;
+      height: calc(100vh - 40px);
+      border: 8px solid #D4AF37;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
-    .date {
-      font-size: 20px;
-      color: white;
-      -webkit-text-stroke: 1px black;
-      font-weight: bold;
-      letter-spacing: 1px;
+    .gallery-container {
+      flex: 1;
+      background: #000;
+      overflow: hidden;
+      position: relative;
     }
 
-    .container {
-      max-width: 500px;
-      margin: auto;
-      padding: 30px 20px;
+    .gallery-track {
+      display: flex;
+      height: 100%;
+      width: max-content;
+      animation: scroll 30s linear infinite;
     }
 
-    .title {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      color: white;
-      -webkit-text-stroke: 1px black;
-      font-family: 'Archivo', sans-serif;
-    }
-
-    .description {
-      font-size: 16px;
-      color: white;
-      -webkit-text-stroke: 0.5px black;
-      margin-top: 10px;
-    }
-
-    .event-details {
-      margin-top: 50px;
-    }
-
-    .event-details img {
-      border-radius: 50%;
-      width: 200px;
-      height: 200px;
+    .gallery-track img {
+      height: 100%;
+      width: auto;
       object-fit: cover;
-      margin-bottom: 20px;
+      flex-shrink: 0;
     }
 
-    .event-details h1, .event-details h2 {
-      color: white;
-      -webkit-text-stroke: 1px black;
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
-    .map-button {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
+    .section {
+      flex: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f9f9f9;
     }
 
-    .map-button a {
-      text-decoration: none;
-      color: black;
+    .center-text {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      color: #D4AF37;
+      margin-bottom: 40px;
     }
 
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .circle-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #D4AF37;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .person-name {
+      font-size: 40px;
+      font-weight: bold;
+      color: #D4AF37;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .person-name {
+        font-size: 32px;
+      }
+
+      .circle-img {
+        width: 150px;
+        height: 150px;
+      }
+
+      .border-wrapper {
+        margin: 10px;
+        height: calc(100vh - 20px);
+        border-width: 5px;
+        border-radius: 12px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <div class="circle-image">
-    <img src="./wedding1.png" alt="Sijoy and Sherly">
+  <div class="border-wrapper">
+
+    <!-- Scrolling Gallery -->
+    <div class="gallery-container">
+  <div class="gallery-track"> 
+    <!-- Add your images here -->
+     <img src="./wedding1.jpg" alt="Image 1">
+    <img src="./wedding3background.jpg" alt="Image 2">
+    <img src="./wedding1.jpg" alt="Image 3">
+    <img src="./wedding3background.jpg" alt="Image 4">
+    <img src="./wedding1.jpg" alt="Image 5"> 
+    
+    <!-- Repeat images for seamless loop -->
+   
+      <img src="./wedding1.jpg" alt="Image 1">
+    <img src="./wedding3background.jpg" alt="Image 2">
+    <img src="./wedding1.jpg" alt="Image 3">
+    <img src="./wedding3background.jpg" alt="Image 4">
+    <img src="./wedding1.jpg" alt="Image 5">
   </div>
+</div>
 
-  <h2>WE ARE GETTING MARRIED</h2>
-  <h1>SIJOY</h1>
-  <p class="ampersand">&</p>
-  <h1>SHERLY</h1>
+    <!-- About Us Section -->
+    <div class="section">
+      <div class="center-text">ABOUT US</div>
 
-  <div class="divider">❀❁❀</div>
-  <div class="date">17 Aug 2025</div>
+      <div class="about-container">
+        <img src="./wedding1.jpg" alt="Sijoy" class="circle-img">
+        <div class="person-name">SIJOY</div>
+      </div>
 
-  <!-- About Section -->
-  <div class="container">
-    <div class="title">ABOUT US</div>
-
-    <div class="circle-image">
-      <img src="./wedding4sijoy.png" alt="Sijoy Photo">
-    </div>
-    <h1>SIJOY</h1>
-    <div class="description">
-      <h2>Mrs. Tessy Joshi & Mr. Joshi AD</h2>
-      <h2>Anthikkatt House, Chittattukara PO, Thrissur</h2>
+      <div class="about-container">
+        <div class="person-name">SHERLY</div>
+        <img src="./wedding1.jpg" alt="Sherly" class="circle-img">
+      </div>
     </div>
 
-    <div class="circle-image">
-      <img src="./wedding6sherly.png" alt="Sherly Photo">
-    </div>
-    <h1>SHERLY</h1>
-    <div class="description">
-      <h2>D/O Annie Antony & Late Antony KO</h2>
-      <h2>Kuttikkatt House, Elthuruth PO, Thrissur</h2>
-    </div>
-  </div>
-
-<!-- Event Details Section Betrothal -->
-  <div class="event-details">
-    <h2>EVENT DETAILS</h2>
-    <h2>BETROTHAL</h2>
-    <h2>09/08/2025</h2>
-    <h2>12:00 PM</h2>
-    <h2>LITTLE FLOWER CHURCH</h2>
-    <h2>OLARIKKARA</h2>
-    <button class="map-button">
-      <a href="https://maps.app.goo.gl/d62KV8jmGWe2fexd6">LOCATION</a>
-    </button>
-  </div>
-
-  <!-- Event Details Section Wedding -->
-  <div class="event-details">
-   <!-- <h2>EVENT DETAILS</h2>  -->
-    <h2>WEDDING</h2>
-    <h2>17/08/2025</h2>
-    <h2>12:05 PM</h2>
-    <h2>ST. SEBASTIAN CHURCH</h2>
-    <h2>CHITTATTUKARA</h2>
-    <button class="map-button">
-      <a href="https://maps.app.goo.gl/nQNX8saN14W5gKoh9">LOCATION</a>
-    </button>
   </div>
 
 </body>
 </html>
+
+
