@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KW8  (123456789)  L4YSBME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KW8L4YSBME');
+</script>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=390, user-scalable=no"/>
   <title>Wedding Website</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
+
+  html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+
     /* Responsive Fixes for Gallery & About Us */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .gallery-container {
-    height: 180px; /* smaller gallery height for mobile */
+    height: 300px; /* smaller gallery height for mobile */
   }
 
   .about-container {
@@ -48,13 +75,16 @@
 
     body {
       margin: 0;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
       font-family: 'Georgia', serif;
     }
 
     nav {
       position: fixed;
       top: 0;
-      width: 100%;
+      width: 390px;
       background: #fff;
       border-bottom: 2px solid #D4AF37;
       z-index: 1000;
@@ -74,18 +104,21 @@
 
     section {
       min-height: 100vh;
-      padding-top: 60px; /* for nav space */
+      padding-top: 20px; /* for nav space */
     }
 
     /* === PAGE 1: Countdown Section === */
-    #countdown-section {
-      background: #f6f6f6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      flex-direction: column;
-    }
+    
+      #countdown-section {
+  background: #f6f6f6;
+  height: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+   
 
     #countdown-section .container {
       max-width: 600px;
@@ -136,7 +169,7 @@
     }
 
     .border-wrapper {
-      margin: 20px;
+      margin: 0px;
       border: 8px solid #D4AF37;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -144,7 +177,7 @@
     }
 
     .gallery-container {
-      height: 250px;
+      height: 150px;
       background: #000;
       overflow: hidden;
       position: relative;
@@ -175,24 +208,24 @@
     }
 
     .center-text {
-      font-size: 36px;
+      font-size: 25px;
       font-weight: bold;
       color: #D4AF37;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
 
     .about-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 30px;
+      gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
 
     .circle-img {
-      width: 180px;
-      height: 180px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       border: 5px solid #D4AF37;
       object-fit: cover;
@@ -200,7 +233,7 @@
     }
 
     .person-name {
-      font-size: 40px;
+      font-size: 20px;
       font-weight: bold;
       color: #D4AF37;
     }
@@ -215,7 +248,7 @@
 
     .page-border {
       border: 10px solid #D4AF37;
-      padding: 30px;
+      padding: 40px;
       border-radius: 20px;
       box-shadow: 0 0 25px rgba(0,0,0,0.1);
       max-width: 1000px;
@@ -252,7 +285,7 @@
 }
 
 .invitation:hover {
-  transform: rotateX(6deg) rotateY(-6deg) scale(1.02);
+  transform: rotateX(0deg) rotateY(0deg) scale(1.0);
   box-shadow:
     0 20px 30px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.1),
@@ -375,6 +408,13 @@
       color: #D4AF37;
     }
 
+      .mobile-frame {
+      width: 390px;
+      min-height: 100vh;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      overflow-x: hidden;
+
 
     
   </style>
@@ -383,6 +423,11 @@
 
 </head>
 <body>
+
+    <div class="mobile-frame">
+    <!-- Your content here -->
+    
+  
 
   <!-- Navigation -->
   <nav>
@@ -430,9 +475,8 @@
       <div class="section">
         <div class="center-text">ABOUT US</div>
         <div class="about-container">
-             <div class="person-name">SIJOY</div>
           <img src="./sijoy.png" alt="Sijoy" class="circle-img">
-         
+          <div class="person-name">SIJOY</div>
         </div>
         <div class="about-container">
           <div class="person-name">SHERLY</div>
@@ -478,7 +522,7 @@
 
     function updateCountdown() {
       const now = new Date();
-      const distance = targetDate - now;
+      const distance = targetDate  -  now ;
 
       const days = Math.floor(Math.abs(distance) / (1000 * 60 * 60 * 24));
       const hours = Math.floor((Math.abs(distance) % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -491,6 +535,6 @@
     updateCountdown();
     setInterval(updateCountdown, 1000);
   </script>
-
+  </div>
 </body>
 </html>
