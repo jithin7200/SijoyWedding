@@ -20,7 +20,7 @@
 
   html, body {
   height: 100%;
-  margin: 0;
+  margin: 1px;
   padding: 0;
   scroll-behavior: smooth;
   overflow-y: scroll;
@@ -64,9 +64,17 @@ section {
     border-width: 5px;
   }
 
-  .page-border.section {
-    padding: 20px 10px;
-  }
+  #countdown-section .page-border.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  text-align: center;
+  padding: 1%;
+  box-sizing: border-box;
+}
+
 }
 
     html {
@@ -117,18 +125,7 @@ section {
   align-items: center;
   text-align: center;
   flex-direction: column;
-   padding: 10px 10px 10px;
 }
-
-/* #countdown-section {
-  background: #f6f6f6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  padding: 80px 10px 40px;
-} */
    
 
     #countdown-section .container {
@@ -175,78 +172,39 @@ section {
     }
 
     /* === PAGE 2: Gallery Section === */
-#gallery-section {
-  background-color: #f9f9f9;
-  padding: 10px 10px 10px;
-}
+    #gallery-section {
+      background-color: #f9f9f9;
+      padding: 3%;
+    }
 
-.border-wrapper {
-  width: 95%;
-  margin: 0 auto;
-  padding-bottom: 20px;
-  border: 8px solid #D4AF37;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  overflow: hidden;
-}
+    .border-wrapper {
+      margin: 0px;
+      border: 8px solid #D4AF37;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
 
-.gallery-container {
-  height: 220px;
-  background: #000;
-  overflow: hidden;
-  position: relative;
-}
+    .gallery-container {
+      height: 150px;
+      background: #000;
+      overflow: hidden;
+      position: relative;
+    }
 
-.gallery-track {
-  display: flex;
-  height: 100%;
-  width: max-content;
-  animation: scroll 30s linear infinite;
-}
+    .gallery-track {
+      display: flex;
+      height: 100%;
+      width: max-content;
+      animation: scroll 30s linear infinite;
+    }
 
-.gallery-track img {
-  height: 100%;
-  width: auto;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.section {
-  text-align: center;
-  padding: 0 10px;
-  margin: 0;
-}
-
-.center-text {
-  font-size: 25px;
-  font-weight: bold;
-  color: #D4AF37;
-  margin-bottom: 10px;
-}
-
-.about-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  margin: 10px 0;
-}
-
-.circle-img {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  border: 5px solid #D4AF37;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.person-name {
-  font-size: 20px;
-  font-weight: bold;
-  color: #D4AF37;
-}
-
+    .gallery-track img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
 
     @keyframes scroll {
       0% { transform: translateX(0); }
@@ -466,8 +424,8 @@ section {
       box-shadow: 0 0 20px rgba(0,0,0,0.2);
       overflow-x: hidden;
 
+
       }
-    
   </style>
 
 
