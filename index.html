@@ -1,42 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KW8  (123456789)  L4YSBME"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KW8L4YSBME');
-</script>
-
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=390, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wedding Website</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-
-  html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-
-section {
-  height: 100vh;
-  scroll-snap-align: start;
-}
-
-
     /* Responsive Fixes for Gallery & About Us */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .gallery-container {
-    height: 300px; /* smaller gallery height for mobile */
+    height: 180px; /* smaller gallery height for mobile */
   }
 
   .about-container {
@@ -75,16 +48,13 @@ section {
 
     body {
       margin: 0;
-      background: #f0f0f0;
-      display: flex;
-      justify-content: center;
       font-family: 'Georgia', serif;
     }
 
     nav {
       position: fixed;
       top: 0;
-      width: 390px;
+      width: 100%;
       background: #fff;
       border-bottom: 2px solid #D4AF37;
       z-index: 1000;
@@ -104,21 +74,18 @@ section {
 
     section {
       min-height: 100vh;
-      padding-top: 20px; /* for nav space */
+      padding-top: 60px; /* for nav space */
     }
 
     /* === PAGE 1: Countdown Section === */
-    
-      #countdown-section {
-  background: #f6f6f6;
-  height: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-}
-   
+    #countdown-section {
+      background: #f6f6f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
 
     #countdown-section .container {
       max-width: 600px;
@@ -169,7 +136,7 @@ section {
     }
 
     .border-wrapper {
-      margin: 0px;
+      margin: 20px;
       border: 8px solid #D4AF37;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -177,7 +144,7 @@ section {
     }
 
     .gallery-container {
-      height: 150px;
+      height: 250px;
       background: #000;
       overflow: hidden;
       position: relative;
@@ -208,24 +175,24 @@ section {
     }
 
     .center-text {
-      font-size: 25px;
+      font-size: 36px;
       font-weight: bold;
       color: #D4AF37;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
 
     .about-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 10px;
+      gap: 30px;
       flex-wrap: wrap;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
     }
 
     .circle-img {
-      width: 100px;
-      height: 100px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       border: 5px solid #D4AF37;
       object-fit: cover;
@@ -233,7 +200,7 @@ section {
     }
 
     .person-name {
-      font-size: 20px;
+      font-size: 40px;
       font-weight: bold;
       color: #D4AF37;
     }
@@ -248,7 +215,7 @@ section {
 
     .page-border {
       border: 10px solid #D4AF37;
-      padding: 40px;
+      padding: 30px;
       border-radius: 20px;
       box-shadow: 0 0 25px rgba(0,0,0,0.1);
       max-width: 1000px;
@@ -285,7 +252,7 @@ section {
 }
 
 .invitation:hover {
-  transform: rotateX(0deg) rotateY(0deg) scale(1.0);
+  transform: rotateX(6deg) rotateY(-6deg) scale(1.02);
   box-shadow:
     0 20px 30px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.1),
@@ -408,14 +375,7 @@ section {
       color: #D4AF37;
     }
 
-      .mobile-frame {
-      width: 390px;
-      min-height: 100vh;
-      background: white;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-      overflow-x: hidden;
 
-      }
     
   </style>
 
@@ -424,15 +384,10 @@ section {
 </head>
 <body>
 
-    <div class="mobile-frame">
-    <!-- Your content here -->
-    
-  
-
   <!-- Navigation -->
   <nav>
-    <a href="#countdown-section">Announcement</a>
-    <a href="#gallery-section">We</a>
+    <a href="#countdown-section">Countdown</a>
+    <a href="#gallery-section">Gallery</a>
     <a href="#invitation-section">Invitation</a>
     <a href="#thankyou-section">Thank You</a>
   </nav>
@@ -442,7 +397,7 @@ section {
   <div class="page-border section">
     <div class="container">
       <div class="countdown" id="countdown">Loading...</div>
-      <div class="circle-image"><img src="./couple.png" alt="Couple" /></div>
+      <div class="circle-image"><img src="./wedding1.jpg" alt="Couple" /></div>
       <div class="title">WE ARE GETTING MARRIED</div>
       <div class="names">SIJOY</div>
       <div class="and">&</div>
@@ -459,28 +414,25 @@ section {
     <div class="border-wrapper">
       <div class="gallery-container">
         <div class="gallery-track">
-          <img src="./img1.jpg" alt="1">
-          <img src="./img2.jpg" alt="2">
-          <img src="./img3.jpg" alt="3">
-          <img src="./img4.jpg" alt="4">
-          <img src="./img5.jpg" alt="5">
+          <img src="./wedding1.jpg" alt="1">
+          <img src="./wedding3background.jpg" alt="2">
+          <img src="./wedding1.jpg" alt="3">
+          <img src="./wedding3background.jpg" alt="4">
+          <img src="./wedding1.jpg" alt="5">
           <!-- Loop for infinite scroll -->
-          <img src="./img6.jpg" alt="6">
-          <img src="./img7.jpg" alt="7">
-          <img src="./img8.jpg" alt="8">
-          <img src="./img9.jpg" alt="9">
-          <img src="./img10.jpg" alt="10">
+          <img src="./wedding1.jpg" alt="6">
+          <img src="./wedding3background.jpg" alt="7">
         </div>
       </div>
       <div class="section">
         <div class="center-text">ABOUT US</div>
         <div class="about-container">
-          <img src="./sijoy.png" alt="Sijoy" class="circle-img">
+          <img src="./wedding1.jpg" alt="Sijoy" class="circle-img">
           <div class="person-name">SIJOY</div>
         </div>
         <div class="about-container">
           <div class="person-name">SHERLY</div>
-          <img src="./sherly.png" alt="Sherly" class="circle-img">
+          <img src="./wedding1.jpg" alt="Sherly" class="circle-img">
         </div>
       </div>
     </div>
@@ -510,7 +462,7 @@ section {
   <section id="thankyou-section">
     <div class="page-border thank-you-container">
       <div class="header">ABOUT US</div>
-      <div class="circle-image"><img src="./hand.png" alt="Couple" /></div>
+      <div class="circle-image"><img src="./wedding1.jpg" alt="Couple" /></div>
       <div class="thank-you"><strong>THANK YOU</strong></div>
     </div>
   </section>
@@ -522,7 +474,7 @@ section {
 
     function updateCountdown() {
       const now = new Date();
-      const distance = targetDate  -  now ;
+      const distance = targetDate - now;
 
       const days = Math.floor(Math.abs(distance) / (1000 * 60 * 60 * 24));
       const hours = Math.floor((Math.abs(distance) % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -535,6 +487,6 @@ section {
     updateCountdown();
     setInterval(updateCountdown, 1000);
   </script>
-  </div>
+
 </body>
 </html>
