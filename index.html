@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wedding Website</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Monsieur+La+Doulaise&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Style+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Cookie&family=Lexend:wght@100..900&family=Pacifico&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">  
   <style>
     /* Responsive Fixes for Gallery & About Us */
 @media (max-width: 768px) {
@@ -121,16 +121,17 @@
 
     .title {
       font-family: "Spectral", serif;
-      font-weight: 600;
+      font-weight: 700;
       font-style: normal;
       color: #8b0000;
+      font-size: 15px;
       margin-bottom: 10px;
     }
 
     .names {
       font-family: "Akaya Kanadaka", system-ui;
-      font-style: normal;
-      font-size: 2rem;
+      font-style: bold;
+      font-size: 25px;
       letter-spacing: 2px;
       color: #D4AF37;
     }
@@ -185,6 +186,7 @@
     }
 
     .center-text {
+      font-family: "Pacifico", cursive;
       font-size: 36px;
       font-weight: bold;
       color: #D4AF37;
@@ -330,6 +332,11 @@
       color: #D4AF37;
       font-size: 32px;
     }
+.invitation h3 {
+      font-family: "Cookie", cursive;
+      color: #D4AF37;
+      font-size: 32px;
+    }
 
     .invitation p {
       font-size: 16px;
@@ -364,8 +371,8 @@
 
     .thank-you-container .header {
       font-size: 36px;
-      font-family: 'Playfair Display', serif;
-      color: #333;
+      font-family: "Lexend", sans-serif;
+      color: #D4AF37;
     }
 
     .thank-you-container .circle-image {
@@ -387,6 +394,7 @@
 
 
     .story{
+      font-family: "Lexend", sans-serif;
       font-size: 16px;
       color: #8b0000;
       margin-top: 0px;
@@ -413,7 +421,7 @@
   <div class="page-border section">
     <div class="container">
       <div class="countdown" id="countdown">Loading...</div>
-      <div class="circle-image"><img src="./wedding1.jpg" alt="Couple" /></div>
+      <div class="circle-image"><img src="./couple.png" alt="Couple" /></div>
       <div class="title">WE ARE GETTING MARRIED</div>
       <div class="names">SIJOY</div>
       <div class="and">&</div>
@@ -430,14 +438,17 @@
     <div class="border-wrapper">
       <div class="gallery-container">
         <div class="gallery-track">
-          <img src="./wedding1.jpg" alt="1">
-          <img src="./wedding3background.jpg" alt="2">
-          <img src="./wedding1.jpg" alt="3">
-          <img src="./wedding3background.jpg" alt="4">
-          <img src="./wedding1.jpg" alt="5">
+          <img src="./img1.jpg" alt="1">
+          <img src="./img2.jpg" alt="2">
+          <img src="./img3.jpg" alt="3">
+          <img src="./img4.jpg" alt="4">
+          <img src="./img5.jpg" alt="5">
           <!-- Loop for infinite scroll -->
-          <img src="./wedding1.jpg" alt="6">
-          <img src="./wedding3background.jpg" alt="7">
+          <img src="./img6.jpg" alt="6">
+          <img src="./img7.jpg" alt="7">
+          <img src="./img8.jpg" alt="8">
+          <img src="./img9.jpg" alt="9">
+          <img src="./img10.jpg" alt="10">
         </div>
       </div>
       <div class="section">
@@ -458,14 +469,14 @@ Now, as we begin this exciting new chapter hand in hand, we can’t wait to cele
   <section id="invitation-section">
     <div class="page-border section">
       <div class="invitation">
-        <h1>Betrothal</h1>
+        <h3>Betrothal</h3>
         <p>August 09, 2025 Saturday<br>11:00am</p>
         <p>Venue: Little Flower Church<br>Olarikara</p>
         <p>Lunch at Cosmos Square Auditorium, Elthuruth</p>
         <a href="https://maps.app.goo.gl/BijQuiv7XZySuphX8" class="map-button">View Map</a>
       </div>
       <div class="invitation">
-        <h1>Wedding</h1>
+        <h3>Wedding</h3>
         <p>August 17, 2025 Sunday<br>12:05pm</p>
         <p>Venue: St.Sebastian Church <br>Chittattukara</p>
          <p>Lunch at St.Sebastian's Parish Hall Chittattukara</p>
@@ -477,8 +488,8 @@ Now, as we begin this exciting new chapter hand in hand, we can’t wait to cele
   <!-- Page 4: Thank You -->
   <section id="thankyou-section">
     <div class="page-border thank-you-container">
-      <div class="header">ABOUT US</div>
-      <div class="circle-image"><img src="./wedding1.jpg" alt="Couple" /></div>
+      <div class="header">We joyfully invite you to be part of our special day and share the happiness of our union.</div>
+      <div class="circle-image"><img src="./hand.png" alt="Couple" /></div>
       <div class="thank-you"><strong>THANK YOU</strong></div>
     </div>
   </section>
