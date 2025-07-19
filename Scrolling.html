@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page by Page Scroll</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      scroll-behavior: smooth;
+      overflow: hidden;
+    }
+
+    main {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    section {
+      height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      color: white;
+    }
+
+    .one { background: #1a1a2e; }
+    .two { background: #16213e; }
+    .three { background: #0f3460; }
+
+    /* Hide scrollbars on desktop */
+    main::-webkit-scrollbar {
+      display: none;
+    }
+    main {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <section class="one">💍 Welcome to Our Betrothal</section>
+    <section class="two">❤️ Our Story</section>
+    <section class="three">📅 Event Details</section>
+  </main>
+
+</body>
+</html>
