@@ -4,6 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wedding Website</title>
+  <!-- Google Analytics Code Start -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-194BZJFPF5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-194BZJFPF5');
+  </script>
+  <!-- Google Analytics Code End -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,7 +109,6 @@
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
-    border-radius: 0;
 } 
     .countdown {
       font-size: 2rem;
@@ -114,25 +123,25 @@
       border: 5px solid #d9a7a7;
       margin: 0 auto 20px;
     }
-   .normal-image {
-  width: 100%;
-  max-width: 600px;  
-  height: auto;      
-  aspect-ratio: 16/9;
-  border: 5px solid #d9a7a7;
-  margin: 0 auto 20px;
-  display: block;
-  object-fit: cover; 
-}
-
-
-
 
     .circle-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
+
+    .normal-image {
+  width: 100%;
+  max-width: 600px;  
+  height: auto;      
+  aspect-ratio: 16/9;
+
+  margin: 0 auto 20px;
+  display: block;
+  object-fit: cover; 
+}
+
 
     .title {
       font-family: "Spectral", serif;
@@ -163,8 +172,8 @@
 
     .border-wrapper {
       margin: 20px;
-      /* border: 8px solid #D4AF37; */
-      /* border-radius: 20px; */
+      border: 8px solid #D4AF37;
+      border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       overflow: hidden;
     }
@@ -180,7 +189,7 @@
       display: flex;
       height: 100%;
       width: max-content;
-      animation: scroll 50s linear infinite;
+      animation: scroll 60s linear infinite;
     }
 
     .gallery-track img {
@@ -241,7 +250,7 @@
     }
 
     .page-border {
-      /* border: 10px solid #D4AF37; */
+      border: 10px solid #D4AF37;
       padding: 30px;
       border-radius: 20px;
       box-shadow: 0 0 25px rgba(0,0,0,0.1);
@@ -383,7 +392,7 @@
       padding: 40px;
     }
     .thank-you-container .header {
-      font-size: 36px;
+      font-size: 24px;
       font-family: "Lexend", sans-serif;
       color: #8b0000;
     }
@@ -420,11 +429,11 @@
   </nav>
 
   <!-- Page 1: Countdown -->
-<section id="countdown-section">
+ <section id="countdown-section">
   <div class="page-border section">
     <div class="container">
       <div class="countdown" id="countdown">Loading...</div>
-      <img src="./img1.jpg" alt="Couple" class="normal-image" />
+      <div class="normal-image"><img src="./couple.jpg" alt="Couple" /></div>
       <div class="title">WE ARE GETTING MARRIED</div>
       <div class="names">SIJOY</div>
       <div class="and">&</div>
@@ -434,7 +443,6 @@
     </div>
   </div>
 </section>
-
 
 
   <!-- Page 2: Gallery & About Us -->
@@ -452,7 +460,7 @@
           <img src="./img8.jpg" alt="8">
           <img src="./img9.jpg" alt="9">
           <img src="./img10.jpg" alt="10">
-     <!-- Loop for infinite scroll -->
+    <!-- Loop for infinite scroll -->
           <img src="./img1.jpg" alt="1">
           <img src="./img2.jpg" alt="2">
           <img src="./img3.jpg" alt="3">
@@ -552,7 +560,7 @@ As we step into this beautiful new chapter, hand in hand, we’re so excited to 
       const minutes = Math.floor((Math.abs(distance) % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((Math.abs(distance) % (1000 * 60)) / 1000);
 
-      countdownElement.textContent = `${distance < 0 ? '-' : ''}${days}d ${hours}h ${minutes}m ${seconds}s`;
+     countdownElement.textContent = `${distance < 0 ? '-' : ''}${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 
     updateCountdown();
