@@ -99,6 +99,7 @@
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
+    border-radius: 0;
 } 
     .countdown {
       font-size: 2rem;
@@ -113,6 +114,16 @@
       border: 5px solid #d9a7a7;
       margin: 0 auto 20px;
     }
+    .normal-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border: 5px solid #d9a7a7;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+
 
     .circle-image img {
       width: 100%;
@@ -149,8 +160,8 @@
 
     .border-wrapper {
       margin: 20px;
-      border: 8px solid #D4AF37;
-      border-radius: 20px;
+      /* border: 8px solid #D4AF37; */
+      /* border-radius: 20px; */
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       overflow: hidden;
     }
@@ -227,7 +238,7 @@
     }
 
     .page-border {
-      border: 10px solid #D4AF37;
+      /* border: 10px solid #D4AF37; */
       padding: 30px;
       border-radius: 20px;
       box-shadow: 0 0 25px rgba(0,0,0,0.1);
@@ -406,11 +417,11 @@
   </nav>
 
   <!-- Page 1: Countdown -->
- <section id="countdown-section">
+<section id="countdown-section">
   <div class="page-border section">
     <div class="container">
       <div class="countdown" id="countdown">Loading...</div>
-      <div class="circle-image"><img src="./couple.jpg" alt="Couple" /></div>
+      <img src="./wedding1.jpg" alt="Couple" class="normal-image" />
       <div class="title">WE ARE GETTING MARRIED</div>
       <div class="names">SIJOY</div>
       <div class="and">&</div>
@@ -420,6 +431,7 @@
     </div>
   </div>
 </section>
+
 
 
   <!-- Page 2: Gallery & About Us -->
