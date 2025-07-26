@@ -56,18 +56,33 @@
   }
 }
 
-    html {
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
       scroll-behavior: smooth;
+      overflow: hidden;
     }
 
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-         }
+    main {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
     section {
       min-height: 100vh;
       padding-top: 60px; /* for nav space */
+scroll-snap-align: start;
     }
+ main::-webkit-scrollbar {
+      display: none;
+    }
+    main {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
 
 #countdown-section {
   height: 100vh;
@@ -158,7 +173,7 @@
 
     .border-wrapper {
       margin: 20px;
-      border: 8px solid #000000;
+      border: 8px solid #D4AF37;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       overflow: hidden;
@@ -403,7 +418,7 @@
   </style>
 </head>
 <body>
-
+<main>
 
 
   <!-- Page 1: Countdown -->
@@ -518,11 +533,11 @@ As we step into this beautiful new chapter, hand in hand, we’re so excited to 
   <!-- Page 4: Thank You -->
   <section id="thankyou-section">
     <div class="page-border thank-you-container">
-      <div class="header">We joyfully invite you to be part of our special day and share the happiness of our union.</div>
+      <h1 class="header">We joyfully invite you to be part of our special day and share the happiness of our union.</h1>
       <div class="circle-image"><img src="./hand.png" alt="Couple" /></div>
     </div>
   </section>
-
+</main>
   <!-- Countdown Script -->
   <script>
     const countdownElement = document.getElementById('countdown');
