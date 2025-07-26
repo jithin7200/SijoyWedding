@@ -56,17 +56,36 @@
   }
 }
 
-    html {
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+      overflow: hidden;
+    }
+
+    main {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
       scroll-behavior: smooth;
     }
 
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-         }
     section {
-      min-height: 100vh;
-      padding-top: 60px; /* for nav space */
+      height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main::-webkit-scrollbar {
+      display: none;
+    }
+    main {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
 
 #countdown-section {
@@ -395,7 +414,7 @@
   </style>
 </head>
 <body>
-
+<main>
 
 
   <!-- Page 1: Countdown -->
@@ -536,7 +555,7 @@ As we step into this beautiful new chapter, hand in hand, we’re so excited to 
       <div class="circle-image"><img src="./hand.png" alt="Couple" /></div>
     </div>
   </section>
-
+</main>
   <!-- Countdown Script -->
   <script>
     const countdownElement = document.getElementById('countdown');
