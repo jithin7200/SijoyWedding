@@ -46,7 +46,7 @@
     font-size: 28px;
   }
 
-  .border-wrapper {
+.border-wrapper {
     margin: 10px;
     border-width: 5px;
   }
@@ -56,36 +56,17 @@
   }
 }
 
-    html, body {
-      height: 100%;
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      scroll-behavior: smooth;
-      overflow: hidden;
-    }
-
-    main {
-      height: 100vh;
-      overflow-y: scroll;
-      scroll-snap-type: y mandatory;
-      scroll-behavior: smooth;
-    }
-
+      font-family: 'Georgia', serif;
+         }
     section {
-      height: 100vh;
-      scroll-snap-align: start;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    main::-webkit-scrollbar {
-      display: none;
-    }
-    main {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+      min-height: 100vh;
+      padding-top: 60px; /* for nav space */
     }
 
 #countdown-section {
@@ -177,10 +158,18 @@
 
     .border-wrapper {
       margin: 20px;
-      border: 8px solid #D4AF37;
+      border: 8px solid #000000;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       overflow: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+   border-radius: 20px;
+
     }
 
     .gallery-container {
@@ -263,13 +252,15 @@
       width: 90%;
     }
   .page-border.section {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  text-align: center;
-}
+  flex-direction: column;
+  box-sizing: border-box;
+   border-radius: 20px;
+} 
+
 
 
 .invitation {
@@ -343,8 +334,6 @@
   z-index: -1;
 }
 
-
-
  @keyframes rotateOuter {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -414,7 +403,7 @@
   </style>
 </head>
 <body>
-<main>
+
 
 
   <!-- Page 1: Countdown -->
@@ -435,16 +424,8 @@
 
 
   <!-- Page 2: Gallery & About Us -->
-
- 
-
-
-
   <section id="gallery-section">
     <div class="border-wrapper">
-       
-
-        
       <div class="gallery-container">
         <div class="gallery-track">
           <img src="./img1.jpg" alt="1">
@@ -510,7 +491,7 @@ As we step into this beautiful new chapter, hand in hand, we’re so excited to 
 
          
         </div>
-       </div>
+       
     </div>
   </section>
 
@@ -534,20 +515,6 @@ As we step into this beautiful new chapter, hand in hand, we’re so excited to 
     </div>
   </section>
 
-
-
-
-
-  <!-- <section id="thankyou-section">
-  <div class="page-border section">
-    <div class="thank-you-container">
-      <div class="header">We joyfully invite you to be part of our special day and share the happiness of our union.</div>
-      <div class="circle-image"><img src="./hand.png" alt="Couple" /></div>
-    </div>
-  </div>
-</section> -->
-
-
   <!-- Page 4: Thank You -->
   <section id="thankyou-section">
     <div class="page-border thank-you-container">
@@ -555,7 +522,7 @@ As we step into this beautiful new chapter, hand in hand, we’re so excited to 
       <div class="circle-image"><img src="./hand.png" alt="Couple" /></div>
     </div>
   </section>
-</main>
+
   <!-- Countdown Script -->
   <script>
     const countdownElement = document.getElementById('countdown');
